@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>All-New Cars</title>
+    </h:head>
+    <h:body>
+	<h2>Used Cars Stock List</h2>
+	<h:form>
+            <h:dataTable value="#{newCarBean.allNewCars}" var="used" border="2"
+			cellspacing="1" cellpadding="1">
+                
+			<h:column>
+				<c:facet name="header">Car ID</c:facet>
+                    #{used.carID}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Make</c:facet>
+                    #{used.carMake}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Model</c:facet>
+                    #{used.carModel}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Type</c:facet>
+                    #{used.carType}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Color</c:facet>
+                    #{used.color}
+                       </h:column>
+	       <h:column>
+		<c:facet name="header">Car Price</c:facet>
+                    #{used.price}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Status</c:facet>
+                    #{used.carStatus}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Warranty</c:facet>
+                    #{used.carWarranty}
+                </h:column>
+		<h:column>
+				<c:facet name="header">Roadside Assistance</c:facet>
+                    #{used.roadAssistance}
+                  </h:column>  
+            </h:dataTable>
+            <p></p>
+            <h:commandLink value="Add a Used Car" action="usedcar"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+

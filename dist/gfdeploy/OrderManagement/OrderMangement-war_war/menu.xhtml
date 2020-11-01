@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>home</title>
+    </h:head>
+    <h:body>
+        <div>
+        <h:form>
+        <p></p>
+        <h2> BRAND NEW CAR SECTION </h2>
+        <p></p>
+        <h:commandLink value="create a brand new car" action="#{menuBean.createANewCar()}"/>
+        <p></p>
+        <h:commandLink  value="brand new cars stock" action="#{newCarBean.getallUsedCars()}"/>
+        <p></p>
+        <h:commandLink value="find a new car" action="#{menuBean.findNewCar()}"/>
+        <p></p>
+        <h2> USED CAR SECTION </h2>
+        <p></p>
+        <h:commandLink value="create a used car" action="#{menuBean.createUsedCar()}"/>
+        <p></p>
+        <h:commandLink value="used car stock" action="#{usedCarBean.getallUsedCars()}"/>
+        <p></p>
+        <h:commandLink  value="find a used car" action="#{menuBean.findUsedCar()}"/>
+        <p></p>
+        <h2> CUSTOMERS </h2>
+        <p></p>
+        <h:commandLink value="create a customer" action="#{menuBean.createCustomer()}"/>
+        <p></p>
+        <h:commandLink value="list of customers" action="#{customerBean.allCustomers()}"/>
+        <p></p>
+        <h:commandLink value="search for a customer" action="#{menuBean.findACustomers()}"/>
+        <p></p>
+        <h2> ORDERS OF CARS </h2>
+        <p></p>
+        <h:commandLink value="create an order" action="#{menuBean.createOrder()}"/>
+        <p></p>
+        <h:commandLink value="list of orders" action="#{orderBean.getAllOrder()}"/>
+        <p></p>
+        <h:commandLink value="search for an order" action="#{menuBean.findOrder()}"/>
+        <p></p>
+        <hr></hr>
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

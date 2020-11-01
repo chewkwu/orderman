@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>All-Customers</title>
+    </h:head>
+    <h:body>
+	<h2>Customer Detail </h2>
+        <p></p>
+        <h:form>
+        Enter Customer Phone : <h:inputText id="phone" value="#{customerBean.phone}"/>
+        <p></p>
+        <h:commandButton label="Find Customer" value="Find Customer" action="#{customerBean.findACustomer}"/>
+        <p></p>
+        <h:outputText id="message" value="${customerBean.outputText}"/>
+        <p></p>
+        <h:dataTable value="${customerBean.custbean}" var="customer" border="2"
+			cellspacing="1" cellpadding="1">
+			<h:column>
+				<c:facet name="header">Name</c:facet>
+                    ${customer.name}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Phone Number</c:facet>
+                    ${customer.phone}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Email Address</c:facet>
+                    ${customer.email}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Home Address</c:facet>
+                    ${customer.address}
+                </h:column>
+		</h:dataTable>
+            <p></p>
+            <h:commandLink value="Create an new Customer" action="#{customerBean.createCustomer()}"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+

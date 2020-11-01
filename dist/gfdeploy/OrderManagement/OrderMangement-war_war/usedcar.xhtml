@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Create-Customer</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <p></p>
+        <h1>ADD A USED CAR</h1>
+        <p></p>
+        <hr/>
+        <p></p>
+        Car Make    <h:inputText id="make" value="#{usedCarBean.carMake}"/>
+        <p></p>
+        Car Model   <h:inputText id="model" value="#{usedCarBean.carModel}"/>
+        <p></p>
+        Car Type <h:inputText id="crType" value="#{usedCarBean.carType}"/>
+        <p></p>
+        Car Color   <h:inputText id="ucolor" value="#{usedCarBean.carColor}"/>
+        <p></p>
+        Car Price   <h:inputText id="price" value="#{usedCarBean.price}"/>
+        <p></p>
+        Car Status   <h:inputText id="status" value="#{usedCarBean.status}"/>
+        <p></p>
+        Vehicle Number   <h:inputText id="vin" value="#{usedCarBean.vin}"/>
+        <p></p>
+        Registration Number   <h:inputText id="regno" value="#{usedCarBean.regNumber}"/>
+        <p></p>
+        Registration Expiry   <h:inputText id="exp" value="#{usedCarBean.regExpiry}"/>
+        <p></p>
+        Odometer   <h:inputText id="odo" value="#{usedCarBean.odometer}"/>
+        <p></p>
+        Service History   <h:inputText id="color" value="#{usedCarBean.history}"/>
+        <p></p>
+        <h:outputText id="outext" value="${usedCarBean.outText}"/>
+        <p></p>
+        <h:commandButton label="Create Car"  value="Create Car" action="#{usedCarBean.addUsedCar()}"/>
+        <p></p>
+        <h:commandLink value="Used Cars Stock" action="#{usedCarBean.getallUsedCars()}"/>
+        <p></p>
+        <h:commandLink value="Main menu" action="menu"/>
+        <p></p>
+        <hr/>
+        </h:form>
+    </h:body>
+</html>
+

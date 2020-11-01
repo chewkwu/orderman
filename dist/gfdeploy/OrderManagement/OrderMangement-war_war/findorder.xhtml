@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>All-Customers</title>
+    </h:head>
+    <h:body>
+	<h2>Order Detail </h2>
+        <p></p>
+        <h:form>
+            Enter Order ID : <h:inputText id="phone" value="#{orderBean.orderID}"/>
+        <p></p>
+        <h:commandButton label="Find Order" value="Find Order" action="#{orderBean.findOrder()}"/>
+        <p></p>
+        <h:outputText id="message" value="${orderBean.output}"/>
+        <p></p>
+        <h:dataTable value="${orderBean.ordbean}" var="order" border="2"
+			cellspacing="1" cellpadding="1">
+			<h:column>
+				<c:facet name="header">Order ID</c:facet>
+                    ${order.orderID}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car ID</c:facet>
+                    ${order.carID}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Customer Phone</c:facet>
+                    ${order.phone}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Order Date</c:facet>
+                    ${order.orderDate}
+                </h:column>
+		</h:dataTable>
+            <p></p>
+            <h:commandLink value="Create an new Order" action="createorder"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+

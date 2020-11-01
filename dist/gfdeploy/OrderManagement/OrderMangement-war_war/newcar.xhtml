@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Create-Customer</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        <p></p>
+        <h1>ADD A NEW CAR</h1>
+        <p></p>
+        <hr/>
+        <p></p>
+        Car Make    <h:inputText id="make" value="#{newCarBean.carMake}"/>
+        <p></p>
+        Car Model   <h:inputText id="model" value="#{newCarBean.carModel}"/>
+        <p></p>
+        Car Type <h:inputText id="crType" value="#{newCarBean.carType}"/>
+        <p></p>
+        Car Color   <h:inputText id="color" value="#{newCarBean.carColor}"/>
+        <p></p>
+        Car Price   <h:inputText id="price" value="#{newCarBean.price}"/>
+        <p></p>
+        Car Status   <h:inputText id="status" value="#{newCarBean.status}"/>
+        <p></p>
+        Car Warranty   <h:inputText id="warranty" value="#{newCarBean.warranty}"/>
+        <p></p>
+        Roadside Assistance   <h:inputText id="rsa" value="#{newCarBean.roadSide}"/>
+        <p></p>
+        <h:outputText id="outext" value="${newCarBean.outText}"/>
+        <p></p>
+        <h:commandButton label="Create Car"  value="Create Car" action="#{newCarBean.addUsedCar()}"/>
+        <p></p>
+        <h:commandLink value="New Cars Stock" action="#{newCarBean.getallUsedCars()}"/>
+        <p></p>
+        <h:commandLink value="Main menu" action="menu"/>
+        <p></p>
+        <hr/>
+        </h:form>
+    </h:body>
+</html>
+

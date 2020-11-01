@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>A-UsedCar</title>
+    </h:head>
+    <h:body>
+	<h2>Car Detail </h2>
+        <p></p>
+        <h:form>
+            Enter Car ID : <h:inputText id="phone" value="#{newCarBean.carID}"/>
+        <p></p>
+        <h:commandButton label="Find Car" value="Find Car" action="#{newCarBean.findAUsedCar()}"/>
+        <p></p>
+        <h:outputText id="message" value="${newCarBean.outText}"/>
+        <p></p>
+        <h:dataTable value="${newCarBean.ubean}" var="used" border="2"
+			cellspacing="1" cellpadding="1">
+			<h:column>
+				<c:facet name="header">Car ID</c:facet>
+                    #{used.carID}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Make</c:facet>
+                    #{used.carMake}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Model</c:facet>
+                    #{used.carModel}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Type</c:facet>
+                    #{used.carType}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Color</c:facet>
+                    #{used.carColor}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Price</c:facet>
+                    #{used.price}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Status</c:facet>
+                    #{used.status}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Car Warranty</c:facet>
+                    #{used.warranty}
+                </h:column>
+			<h:column>
+				<c:facet name="header">Roadside Assistance</c:facet>
+                    #{used.roadSide}
+                </h:column>
+		</h:dataTable>
+            <p></p>
+            <h:commandLink value="Add a new Car" action="newcar"/>
+            <p></p>
+            <h:commandLink value="Main Page" action="menu"/>
+            <p></p>
+            <hr/>
+	</h:form>
+    </h:body>
+</html>
+
